@@ -2,9 +2,10 @@
 function memoize(fn) {
     let cache = {};
     return function(n) {
-        if (n in cache) {
+        if(n in cache) {
             return cache[n];
-        }cache[n] = fn(n);
+        }
+        cache[n] = fn(n);
         return cache[n];
     };
 }
